@@ -11,6 +11,7 @@ workflows:
     jobs:
       # 4. imported-name/job
       - sam/deploy:
+      	  context: jklm-aws-demo
           name: deploy-dev
           s3-bucket: $AWS_ARTIFACT_BUCKET
           stack-name: dev-stack
