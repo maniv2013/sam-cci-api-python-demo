@@ -16,3 +16,7 @@ workflows:
           s3-bucket: $AWS_ARTIFACT_BUCKET
           stack-name: dev-stack
           template: template.yaml
+  delete_application:
+    jobs:
+      - sam/delete:
+          stack-name: dev-stack
